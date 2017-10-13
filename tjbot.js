@@ -37,7 +37,7 @@ var hardware = ['led','servo','microphone', 'speaker','camera'];
 // set up TJBot's configuration
 var tjConfig = {
     robot: {
-    		name: 'mago',
+    		name: 'robotin',
     		gender: 'male',
     },
     listen: {
@@ -97,7 +97,7 @@ function doTwitImage(){
 	var Twit = require('twit');
 	// Leemos la configuración
 	var T = new Twit(config.twitterConfig);
-	
+
 	// Tomamos la foto, la leemos de archivo y la publicamos
 	winston.verbose("Capturando imagen");
 	var fs = require('fs');
@@ -193,13 +193,13 @@ function doListen(){
 		tj.listen(function(msg) {
 			// Validamos si estan hablando con nosotros
 			if (msg.startsWith(tj.configuration.robot.name)) {
-				
+
 				// Eliminamos nuestro nombre del mensaje
 				var turn = msg.toLowerCase().replace(tj.configuration.robot.name.toLowerCase(), "");
-				
+
 				// Empujamos el mensaje a conversation
 				tj.converse(WORKSPACEID, turn, function(response) {
-					
+
 					// Manejamos la respuesta
 					if(response != null && response.description != null && response.description != ''){
 						if(response.description.startsWith('<')){
