@@ -37,7 +37,7 @@ var hardware = ['led','servo','microphone', 'speaker','camera'];
 // set up TJBot's configuration
 var tjConfig = {
     robot: {
-    		name: 'robotin',
+    		name: 'mago',
     		gender: 'male',
     },
     listen: {
