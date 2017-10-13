@@ -47,6 +47,6 @@ exports.credentials.text_to_speech = {
 
 // Watson Visual Recognition
 // https://gateway-a.watsonplatform.net/visual-recognition/api
-exports.credentials.visual_recognition = {
+/*exports.credentials.visual_recognition = {
 	api_key: "",
-};
+};*/
